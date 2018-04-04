@@ -1,0 +1,88 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: lp-dor-node
+  labels:
+    lp_service: lp-dor-node
+    lp_system: lp-dor
+    lp_tier: app
+spec:
+  replicas: 1
+  # selector identifies the set of pods that this
+  # replication controller is responsible for managing
+  #selector:
+  #  name: lp-vifat
+  #  version: ${project.version}
+  # template defines the 'cookie cutter' used for creating
+  # new pods when necessary
+  template:
+    metadata:
+      labels:
+        lp_service: lp-dor-node
+        lp_service_version: 1.0.15
+        lp_system: lp-dor
+        lp_tier: app
+        lp_bb: tomcat
+    spec:
+      containers:
+        - name: lp-dor-node
+          resources:
+            limits:
+              memory: "1Gi"
+              cpu: "1"
+
+          image: [object Promise]/[object Promise]
+          # returns 200 if the service started succesfully
+          livenessProbe:
+        # an http probe
+            httpGet:
+              path: /lp_dor_node/
+            # path: /_health/startup
+              port: 3000
+        # length of time to wait for a pod to initialize
+        # after pod startup, before applying health checking
+            initialDelaySeconds: 60
+            timeoutSeconds: 2
+
+          readinessProbe:
+            httpGet:
+            # path: /_health/current
+        # returns 200 if the serviceand and its dependencies are reachable so it can serve requests
+              path: /lp_dor_node/
+
+              port: 3000
+            initialDelaySeconds: 40
+            timeoutSeconds: 2
+
+          ports:
+            - containerPort: 3000
+          env:
+            - name: ENV_DEFAULT_APP_CSDS_DOMAIN
+              valueFrom:
+                configMapKeyRef:
+                  name: default-app
+                  key: csds-domain
+
+            - name: ENV_DEFAULT_APP_ZONE
+              valueFrom:
+                configMapKeyRef:
+                  name: default-app
+                  key: zone
+
+            - name: ENV_DEFAULT_APP_LP_SEGMENT
+              valueFrom:
+                configMapKeyRef:
+                  name: default-app
+                  key: lpsegment
+
+#            - name: ENV_APP_CONF_FILE
+#              value: /liveperson/code/server_tomcat/config/lp-dor-web-${ENV_DEFAULT_APP_ZONE}-${ENV_DEFAULT_APP_LP_SEGMENT}.properties
+
+          volumeMounts:
+            - name: lp-dor-node-config-vol
+              mountPath: "/liveperson/code/node/config"
+
+      volumes:
+        - name: lp-dor-node-config-vol
+          configMap:
+            name: lp-dor-node-configmap
