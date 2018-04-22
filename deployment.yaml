@@ -31,7 +31,7 @@ spec:
               memory: "1Gi"
               cpu: "1"
 
-          image:  localhost:5000/dortstr:1.0
+          image:  lpcr.int.liveperson.net/lpapps_snapshot/lp-dor-node:1.0.9-129
           # returns 200 if the service started succesfully
           livenessProbe:
         # an http probe
