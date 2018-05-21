@@ -1,5 +1,5 @@
 ## lp-node-ci-1.0.18-YAMLs
 
-**Build number - 313**
+**Build number - 314**
 
  Committed automatically by LP-NODE-CI module
