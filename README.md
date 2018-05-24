@@ -1,5 +1,5 @@
-## lp-node-ci-1.0.22-release-YAMLs
+## lp-node-ci-1.1.0-YAMLs
 
-**Build number - 337**
+**Build number - 338**
 
  Committed automatically by LP-NODE-CI module
