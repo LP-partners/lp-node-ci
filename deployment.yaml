@@ -19,7 +19,7 @@ spec:
     metadata:
       labels:
         lp_service: lp-dor-node
-        lp_service_version: 1.0.19
+        lp_service_version: 1.0.20
         lp_system: lp-dor
         lp_tier: app
         lp_bb: tomcat
