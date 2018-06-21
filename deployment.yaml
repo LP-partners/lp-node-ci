@@ -19,11 +19,11 @@ spec:
     metadata:
       labels:
         lp_service: lp-dor-node
-        lp_service_version: 1.1.2
+        lp_service_version: 1.1.2-release
         lp_system: lp-dor
         lp_tier: app
         lp_bb: tomcat
-        build_number: "358"
+        build_number: "360"
     spec:
       containers:
         - name: lp-dor-node
