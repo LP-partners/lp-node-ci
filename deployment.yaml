@@ -23,6 +23,7 @@ spec:
         lp_system: lp-dor
         lp_tier: app
         lp_bb: tomcat
+        build_number: "358"
     spec:
       containers:
         - name: lp-dor-node
@@ -31,7 +32,7 @@ spec:
               memory: "1Gi"
               cpu: "1"
 
-          image:  lpcr.int.liveperson.net/lpapps_snapshot/lp-dor-node:1.0.24-b163
+          image:  lpcr.int.liveperson.net/lpapps_snapshot/lp-dor-node:1.0.25-master-b166
           #image: localhost:5000/dortstr:1.0
           # returns 200 if the service started succesfully
           livenessProbe:
