@@ -23,14 +23,14 @@ spec:
         lp_system: lp-dor
         lp_tier: app
         lp_bb: tomcat
-        build_number: "378"
+        build_number: "379"
     spec:
       containers:
         - name: lp-dor-node
           resources:
             limits:
-              memory: "1Gi"
-              cpu: "1"
+              memory: "4Gi"
+              cpu: "2"
 
           image:  lpcr.int.liveperson.net/lpapps_snapshot/lp-dor-node:1.0.25-master-b166
           #image: localhost:5000/dortstr:1.0
