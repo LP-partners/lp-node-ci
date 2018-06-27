@@ -13,6 +13,6 @@ spec:
   selector:
     lp_service: lp-dor-node
     lp_system: lp-dor
-    lp_service_version: 1.1.4-release
+    lp_service_version: 1.1.5
     lp_tier: app
   type: NodePort
