@@ -1,5 +1,5 @@
 ## lp-node-ci-1.1.5-YAMLs
 
-**Build number - 1**
+**Build number - 3**
 
-**Branch: master**\n\n Committed automatically by LP-NODE-CI module
+**Branch: genericModule**\n\n Committed automatically by LP-NODE-CI module
