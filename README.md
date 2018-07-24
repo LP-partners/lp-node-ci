@@ -1,5 +1,5 @@
-## lp-node-ci-1.1.6-release-YAMLs
+## lp-node-ci-1.1.7-release-YAMLs
 
-**Build number - 395**
+**Build number - 396**
 
 **Branch: master**\n\n Committed automatically by LP-NODE-CI module

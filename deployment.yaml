@@ -19,11 +19,11 @@ spec:
     metadata:
       labels:
         lp_service: lp-dor-node
-        lp_service_version: 1.1.6-release
+        lp_service_version: 1.1.7-release
         lp_system: lp-dor
         lp_tier: app
         lp_bb: tomcat
-        build_number: "395"
+        build_number: "396"
     spec:
       containers:
         - name: lp-dor-node
@@ -43,7 +43,7 @@ spec:
               port: 3000
         # length of time to wait for a pod to initialize
         # after pod startup, before applying health checking
-            initialDelaySeconds: 60
+            initialDelaySeconds: 40
             timeoutSeconds: 2
 
           readinessProbe:
