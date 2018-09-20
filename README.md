@@ -1,6 +1,6 @@
 ## lp-node-ci-1.1.11-YAMLs
 
-**Build number - 406**
+**Build number - 407**
 
 **Branch: master**
 
