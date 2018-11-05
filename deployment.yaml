@@ -23,7 +23,7 @@ spec:
         lp_system: lp-dor
         lp_tier: app
         lp_bb: tomcat
-        build_number: "412"
+        build_number: "413"
     spec:
       containers:
         - name: lp-dor-node
