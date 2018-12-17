@@ -8,6 +8,11 @@ metadata:
     lp_tier: app
 spec:
   replicas: 1
+  selector:
+   matchLabels:
+    lp_service: lp-dor-node
+    lp_system: lp-dor
+    lp_tier: app
   # selector identifies the set of pods that this
   # replication controller is responsible for managing
   #selector:
@@ -23,7 +28,7 @@ spec:
         lp_system: lp-dor
         lp_tier: app
         lp_bb: tomcat
-        build_number: "422"
+        build_number: "423"
     spec:
       containers:
         - name: lp-dor-node
