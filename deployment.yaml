@@ -24,11 +24,11 @@ spec:
     metadata:
       labels:
         lp_service: lp-dor-node
-        lp_service_version: 1.1.18
+        lp_service_version: 1.1.19-release
         lp_system: lp-dor
         lp_tier: app
         lp_bb: tomcat
-        build_number: "442"
+        build_number: "443"
     spec:
       containers:
         - name: lp-dor-node
