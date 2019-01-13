@@ -7,7 +7,7 @@ metadata:
     lp_system: lp-dor
     lp_tier: app
 spec:
-  replicas: 1
+  replicas: 3
   selector:
    matchLabels:
     lp_service: lp-dor-node
@@ -28,7 +28,7 @@ spec:
         lp_system: lp-dor
         lp_tier: app
         lp_bb: tomcat
-        build_number: "445"
+        build_number: "446"
     spec:
       containers:
         - name: lp-dor-node
